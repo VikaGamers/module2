@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Чат на WebSocket</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    #chat {
+      height: 300px;
+      overflow-y: auto;
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+    #message {
+      width: calc(100% - 100px);
+      padding: 5px;
+    }
+    button {
+      padding: 6px 12px;
+    }
+  </style>
+</head>
+<body>
+<h2>Чат на WebSocket</h2>
+<div id="status">Підключення...</div>
+<div id="chat"></div>
+<div id="controls">
+  <input id="message" placeholder="Введіть повідомлення" onkeydown="if(event.key === 'Enter') sendMessage()">
+  <button id="sendBtn" onclick="sendMessage()">Надіслати</button>
+  <button id="disconnectBtn" onclick="disconnect()">Відключитися</button>
+  <script src="script.js"></script>
+</div>
+</body>
+</html>
